@@ -1,7 +1,7 @@
 row = int(input("Enter The Row: "))
 column = int(input("Enter The Column: "))
 
-list1 = [int(x) for x in input().split()]
+list1 = [i for i in range(1,(row * column) + 1)]
 
 print("List in 1D array: ",list1)
 
@@ -14,12 +14,12 @@ for i in range(row):
 
 print("List in 2d Array: ",twoD_array)
 
-for j in range(row):
+for j in range(column):
     if j % 2 == 0:
-        for i in range(column):
-            print(twoD_array[j][i])
+        for i in range(row):
+            print(twoD_array[i][j])
     else:
         i = row - 1
-        while i > 0:
-            print(twoD_array[j][i])
-            i = i - 1 
+        while i >= 0:
+            print(twoD_array[i][j])
+            i -= 1
